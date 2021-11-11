@@ -7,14 +7,22 @@
 
     <div class="container">
 
-        <h2>Lista de Tarefas</h2>
+        <h2>Lista de Livros</h2>
+
+        <form action="/get" method="GET">
+            <h4> Pesquise um Livro</h4>
+            <input type="text" class="form-control" name="titulo"/>
+            <button class="btn btn-primary">Pesquisar</button>
+        </form>
 
         <table class="table table-hover">
 
-            {% for tarefa in lista: %}
+            {% for livro in lista: %}
             <tr>
-                <td>{{ tarefa['texto'] }}</td>
-                <td>{{ tarefa['concluida'] }} </td>
+                <td>{{ livro['titulo'] }}</td>
+                <td>{{ livro['autor'] }}</td>
+                <td>{{ livro['categoria'] }}</td>
+                <td>{{ livro['concluida'] }} </td>
             </tr>
             {% endfor %}
 
