@@ -2,12 +2,12 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-URL = 'https://5000-cyan-marlin-ll559fu0.ws-us18.gitpod.io/'
+URL= 'https://5000-cyan-marlin-ll559fu0.ws-us18.gitpod.io/'
 
 livros = [
-    {"id": 1, "titulo": "Estudar para a prova", "autor": "Machado de Assis", "categoria": "drama", "concluida": False},
-    {"id": 2, "titulo": "Passear com o cachorro","autor": "Machado de Assis", "categoria": "drama","concluida": True},
-    {"id": 3, "titulo": "Estudar mais para a prova","autor": "Machado de Assis", "categoria": "drama","concluida": False},
+    {"id": 1, "titulo": "Orgulho e Preconceito", "autor": "Jane Austen", "categoria": "Romance", "concluida": False},
+    {"id": 2, "titulo": "1984","autor": "George Orwell", "categoria": "Suspense","concluida": True},
+    {"id": 3, "titulo": "Dom Quixote de la Mancha","autor": "Miguel de Cervantes", "categoria": "Drama","concluida": False},
 ]
 
 @app.route('/')
@@ -23,17 +23,23 @@ def save():
     titulo = request.form['titulo']      # Entrada do título
     autor = request.form['autor']  # Entrada do autor
     categoria = request.form['categoria'] # Entrada da categoria
-    livro = { "titulo": titulo, "autor": autor, "categoria": categoria, "concluida": False }
+
+    #Definindo o id   
+    identificacao= livros[1]
+
+    #Moldando Lista e definindo dados
+    #OBS: Ao definir o 'id' do registro, utilizamos o ultimo elemento da lista somando o valor de seu id + 1
+    livro = {"id": identificacao["id"] + 1, "titulo": titulo, "autor": autor, "categoria": categoria, "concluida": False }
+    
+    #Adicionando a lista
     livros.append(livro)
 
-    # Atribuindo o id            - Tentar fazer dinamico !!!
-    #ultimo= livros[-1]
-
+    #Redirecionando para a página principal
     return redirect(URL)
 
-@app.route('/delete/<id>')  
-def delete():
-    del livros
+@app.route('/delete/<id>')
+def delete(id):
+    del livros[int(id) -1]
     return redirect(URL)
 
 app.run(debug=True)
