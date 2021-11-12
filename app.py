@@ -35,12 +35,12 @@ def save():
     livros.append(livro)
 
     #Redirecionando para a página principal
-    return redirect(URL)
+    return redirect('ttps://5000-gray-snake-rzmm3cs0.ws-us18.gitpod.io/')
 
 @app.route('/delete/<id>')
 def delete(id):
     del livros[int(id) -1]
-    return redirect(URL)
+    return redirect('ttps://5000-gray-snake-rzmm3cs0.ws-us18.gitpod.io/')
 
 app.run(debug=True)
 

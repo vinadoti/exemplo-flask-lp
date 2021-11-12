@@ -85,6 +85,16 @@ h2 {
 	top:1px;
 }
 
+i {
+    font-size: 1.5rem;
+    color: var(--first-color);
+    cursor: pointer;
+  }
+  
+  a{
+    text-decoration:none;
+  }
+
 /* Header ===================== */
 header {
     background: var(--background-header);
