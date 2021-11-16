@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    width: min(90vw, 950px);
+    width: min(90vw, 1500px);
     margin: auto;
 }
 
@@ -168,8 +168,6 @@ input {
     margin: 0.25rem;
      
 }
-
-
 
 /* Footer ===================== */
 footer {

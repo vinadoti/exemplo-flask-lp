@@ -2,7 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-URL= 'https://5000-cyan-marlin-ll559fu0.ws-us18.gitpod.io/'
+#Sempre que acessar pela primeira vez o código, trocar a URL do index aqui:
+URL= 'https://5000-tan-unicorn-wkjf5us5.ws-us18.gitpod.io/'
 
 livros = [
     {"id": 1, "titulo": "Orgulho e Preconceito", "autor": "Jane Austen", "categoria": "Romance", "concluida": False},
@@ -35,12 +36,12 @@ def save():
     livros.append(livro)
 
     #Redirecionando para a página principal
-    return redirect('ttps://5000-gray-snake-rzmm3cs0.ws-us18.gitpod.io/')
+    return redirect(URL + '/')
 
 @app.route('/delete/<id>')
 def delete(id):
     del livros[int(id) -1]
-    return redirect('ttps://5000-gray-snake-rzmm3cs0.ws-us18.gitpod.io/')
+    return redirect(URL + '/')
 
 app.run(debug=True)
 

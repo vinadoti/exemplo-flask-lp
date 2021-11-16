@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title> Minha lista de livros</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"rel="stylesheet"/>
@@ -48,12 +48,19 @@
                     <tr>
                         <td>{{ livro['titulo'] }}</td>
                         <td>{{ livro['autor'] }}</td>
-                        <td>{{ livro['categoria'] }}</td>
-                        <td>{{ livro['concluida'] }} </td>
-                        <td>                <!-- Arrumar - Deixar funcional -->
+                        <td>{{ livro['categoria'] }} </td>
+                        <td>             <!-- Arrumar - Deixar funcional -->
+                            <form action="/update" method="UPDATE" class="form">
+                                <div class="check">
+                                    <input type="checkbox" class="form__input" placeholder=" " name="concluida">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </form>
+                        </td>
+                        <td>        <!-- Arrumar - Deixar funcional -->
                             <a href="/update/{{ livro['id'] }}"  alt="Editar">  <i class="icon-tool"> </i> </a>
                         </td>
-                        <td>                                                                     <!-- Arrumar - Deixar funcional -->
+                        <td>     <!-- Arrumar - Deixar funcional -->
                             <a href="/delete/{{ livro['id'] }}" onclick="return confirm('Deseja realmente excluir este livro da sua lista?')"  alt="Remover"> <i class="icon-trash-2"> </i> </a>
                         </td>
                     </tr>
