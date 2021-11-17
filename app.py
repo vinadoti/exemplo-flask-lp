@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 #Sempre que acessar pela primeira vez o código, trocar a URL do index aqui:
-URL= 'https://5000-tan-unicorn-wkjf5us5.ws-us18.gitpod.io/'
+URL= 'https://5000-aquamarine-kiwi-44oo1n1g.ws-us18.gitpod.io'
 
 livros = [
     {"id": 1, "titulo": "Orgulho e Preconceito", "autor": "Jane Austen", "categoria": "Romance", "concluida": False},
@@ -25,8 +25,12 @@ def save():
     autor = request.form['autor']  # Entrada do autor
     categoria = request.form['categoria'] # Entrada da categoria
 
-    #Definindo o id   
-    identificacao= livros[1]
+    #Definindo o id 
+    if livros:
+        identificacao = livros[-1]
+    else:
+        identificacao = {"id": 0}   
+
 
     #Moldando Lista e definindo dados
     #OBS: Ao definir o 'id' do registro, utilizamos o ultimo elemento da lista somando o valor de seu id + 1
@@ -40,10 +44,15 @@ def save():
 
 @app.route('/delete/<id>')
 def delete(id):
-    del livros[int(id) -1]
+    for indice, livro in enumerate(livros):
+        if livro["id"] == int(id):
+            del livros[indice]
+
     return redirect(URL + '/')
 
 app.run(debug=True)
+
+@app.route('/update/<id>')
 
 
 # Implementar o DELETE!! (2,0 pontos)
