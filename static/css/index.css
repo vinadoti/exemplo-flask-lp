@@ -39,50 +39,35 @@ h2 {
 
 /* Links & Buttons ===================== */
 
-.newbook{
+.btns {
+    margin: 25px 0;
     display: flex;
-    justify-content:space-around;
     align-items: center;
-    margin: 2rem;  
-}
-.create {
-	box-shadow: 0px 10px 14px -7px #7f7fab;
-	background-color:var(--background-header);
-	border-radius:4px;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:15px;
-    font-family: 'Poppins', sans-serif;
-	padding:9px 48px;
-	text-decoration:none;
-}
-.create:hover {
-	background: var(--background-card-total);
-}
-.create:active {
-	position:relative;
-	top:1px;
+    justify-content:space-around;
 }
 
+.btns a,
 .searchbutton {
-	background-color:#4eba6b;
-	border-radius:28px;
-	border:1px solid #18ab29;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:9px 25px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
+    display: inline-block;
+    margin: 0 10px;
+    border: 2px solid #5D5FEF;
+    color: #5D5FEF;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
+
+.btns a:hover{
+    background: #A5A6F6;
+    border: 2px solid #A5A6F6;
+    color: #fff
+}
+
 .searchbutton:hover {
-	background-color:#5cbf2a;
-}
-.searchbutton:active {
-	position:relative;
-	top:1px;
+	background-color:#5cbf2a
 }
 
 i {
@@ -94,6 +79,11 @@ i {
   a{
     text-decoration:none;
   }
+.search {
+    border-radius:25px;
+    font-weight: 500;
+    
+}
 
 /* Header ===================== */
 header {

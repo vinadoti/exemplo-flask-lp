@@ -22,14 +22,10 @@
 
         <header>
             <h1>Minha lista de livros</h1>
-
-            <form action="/search" method="POST" class="form">
-                <input class="search" type="search" placeholder="Digite o título aqui" name="busca"> </input>
-                <button class="searchbutton" type="submit">Pesquisar</button>           <!-- Arrumar - Deixar funcional -->
-            </form>
         </header>  
 
         <main class="container">
+
         
             <section id="table">
                 <table id="data-table">
@@ -38,31 +34,14 @@
                         <th >Título </th>
                         <th >Autor(a)</th>
                         <th >Categoria</th>
-                        <th >Status da leitura</th>
-                        <th></th>  <!-- Onde fica o botão editar -->
-                        <th></th>   <!-- Onde fica o botão excluir -->
                       </tr>
                     </thead>
                     <tbody>
-                    {% for livro in lista: %}
+                    {% for livro in titulo_lista: %}
                     <tr>
                         <td>{{ livro['titulo'] }}</td>
                         <td>{{ livro['autor'] }}</td>
                         <td>{{ livro['categoria'] }} </td>
-                        <td>             <!-- Arrumar - Deixar funcional -->
-                            <form action="/update" method="UPDATE" class="form">
-                                <div class="check">
-                                    <input type="checkbox" class="form__input" placeholder=" " name="concluida">
-                                    <span class="checkmark"></span>
-                                </div>
-                            </form>
-                        </td>
-                        <td>        <!-- Arrumar - Deixar funcional -->
-                            <a href="/update/{{ livro['id'] }}"  alt="Editar">  <i class="icon-tool"> </i> </a>
-                        </td>
-                        <td>     
-                            <a href="/delete/{{ livro['id'] }}" onclick="return confirm('Deseja realmente excluir este livro da sua lista?')"  alt="Remover"> <i class="icon-trash-2"> </i> </a>
-                        </td>
                     </tr>
                     {% endfor %}
                     </tbody>
@@ -70,8 +49,8 @@
             </section>
             
             <div class="btns">
-                <a href="/create" class="create">Adicionar novo livro</a>
-            </div>
+                <a href="/" class="return"> Voltar</i> </a>
+            </div> 
   
         </main> 
     
