@@ -3,7 +3,7 @@
     --dark-blue: #363f5f;
     --background-header: #5D5FEF;
     --background-body: #f0f2f5;
-    --background-card-total: #A5A6F6;
+    --purple-hover: #A5A6F6;
     --text-color: #969cb3;
 
 }
@@ -51,7 +51,7 @@ h2 {
     display: inline-block;
     margin: 0 10px;
     border: 2px solid #5D5FEF;
-    color: #5D5FEF;
+    color: var(--background-header);
     font-weight: 500;
     padding: 10px 25px;
     border-radius: 25px;
@@ -61,9 +61,9 @@ h2 {
 }
 
 .btns a:hover{
-    background: #A5A6F6;
+    background:var(--purple-hover);
     border: 2px solid #A5A6F6;
-    color: #fff
+    color: var(--background-body);
 }
 
 .searchbutton:hover {
@@ -76,12 +76,15 @@ i {
     cursor: pointer;
   }
   
-  a{
+a {
     text-decoration:none;
-  }
+}
 .search {
     border-radius:25px;
     font-weight: 500;
+    border: none;
+    padding: 0.8rem; 
+    width: 23rem;
     
 }
 
@@ -148,15 +151,6 @@ table tbody td {
 
 td {
     color:var(--dark-blue);
-}
-
-/* Form ===================== */
-input {
-    border: none;
-    border-radius: 0.2rem;
-    padding: 0.8rem; 
-    margin: 0.25rem;
-     
 }
 
 /* Footer ===================== */
