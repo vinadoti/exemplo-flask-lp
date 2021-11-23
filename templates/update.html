@@ -17,7 +17,7 @@
 <body>
     <div class="l-form">
 
-        <form action="/edit/{{livro.id}}" method="POST" class="form">
+        <form action="/update/{{livro.id}}" method="POST" class="form">
 
             <div class="return">
                 <a href="/" class="return"> <i class="icon-arrow-left-circle"> </i> </a>
@@ -31,12 +31,12 @@
             </div>
 
             <div class="form__div">
-                <input type="text" class="form__input" placeholder=" " name="autor" value="{{livro.autor}}" >
+                <input type="text" class="form__input" placeholder=" " name="autor" value="{{livro.autor}}">
                 <label for="" class="form__label">Autor do livro</label>
             </div>
 
             <div class="form__div">
-                <input type="text" class="form__input" placeholder=" " name="categoria" value="{{livro.categoria}}" >
+                <input type="text" class="form__input" placeholder=" " name="categoria" value="{{livro.categoria}}">
                 <label for="" class="form__label">Categoria do livro</label>
             </div>
 

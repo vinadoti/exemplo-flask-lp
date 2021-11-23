@@ -25,7 +25,8 @@
         <h1>Minha lista de livros</h1>
 
         <form action="/search" method="POST" class="form">
-            <input class="search" type="search" placeholder="Digite o título ou o autor do livro aqui" name="busca"> </input>
+            <input class="search" type="search" placeholder="Digite o título ou o autor do livro aqui" name="busca">
+            </input>
             <button class="searchbutton" type="submit">Pesquisar</button> <!-- Arrumar - Deixar funcional -->
         </form>
     </header>
@@ -59,7 +60,7 @@
                         </td>
                         <td>
                             <!-- Arrumar - Deixar funcional -->
-                            <a href="/read/{{ livro['id'] }}" alt="Editar"> <i class="icon-tool"> </i> </a>
+                            <a href="/edit/{{ livro['id'] }}" alt="Editar"> <i class="icon-tool"> </i> </a>
                         </td>
                         <td>
                             <a href="/delete/{{ livro['id'] }}"

@@ -85,7 +85,7 @@ h1{
   transition: .3s;
 }
 
-/*  Button */
+/*  Botão */
 .form__button{
   display: block;
   margin-left: auto;
@@ -103,7 +103,7 @@ h1{
   box-shadow: 0 10px 36px rgba(0,0,0,.15);
 }
 
-/*Input focus move up label*/
+/*Input - foco mover para cima */
 .form__input:focus + .form__label{
   top: -.5rem;
   left: .8rem;
@@ -113,7 +113,7 @@ h1{
   z-index: 10;
 }
 
-/*Input focus sticky top label*/
+/* Input - foco etiqueta superior */
 .form__input:not(:placeholder-shown).form__input:not(:focus)+ .form__label{
   top: -.5rem;
   left: .8rem;
@@ -122,7 +122,7 @@ h1{
   z-index: 10;
 }
 
-/*Input focus*/
+/*Input - foco */
 .form__input:focus{
   border: 1.5px solid var(--first-color);
 }
