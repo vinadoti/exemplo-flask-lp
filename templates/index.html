@@ -25,7 +25,7 @@
         <h1>Minha lista de livros</h1>
 
         <form action="/search" method="POST" class="form">
-            <input class="search" type="search" placeholder="Digite o título ou o autor do livro aqui" name="busca">
+            <input class="search" type="search" placeholder="Digite aqui para pesquisar o livro" name="busca">
             </input>
             <button class="searchbutton" type="submit">Pesquisar</button> 
         </form>
@@ -40,7 +40,7 @@
                         <th>Título </th>
                         <th>Autor(a)</th>
                         <th>Categoria</th>
-                        <th>Status da leitura</th>
+                        <th>Finalizado</th>
                         <th></th> <!-- Onde fica o botão editar -->
                         <th></th> <!-- Onde fica o botão excluir -->
                     </tr>
@@ -54,7 +54,7 @@
                         <td>
                             <!-- Arrumar - Deixar funcional -->
                             <div class="check">
-                                <input type="checkbox" class="form__input" placeholder=" " name="concluida">
+                                <input type="checkbox" class="form__input" name="concluida">
                                 <span class="checkmark"></span>
                             </div>
                         </td>
